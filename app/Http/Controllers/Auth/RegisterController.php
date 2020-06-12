@@ -117,7 +117,7 @@ class RegisterController extends Controller
                 $mail->Body    = 'Your OTP is'.$otp;
                 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
         				$mail->send();
-        				echo back()->with('success','Message has been sent!');exit;
+        				echo back()->with('success','Message has been sent!');
         			} catch (Exception $e) {
                 echo $e->getMessage();exit;
         				echo back()->with('error','Message could not be sent.');exit;
